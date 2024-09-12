@@ -45,12 +45,6 @@ function App() {
       console.log('Disconnected from server')
     })
 
-    socket.on('connect_error', (err) => {
-      console.log(err.message)
-
-      console.log(err)
-    })
-
     return () => {
       if (socket.connected) socket.disconnect()
     }
@@ -142,10 +136,10 @@ function App() {
                   handleNodeClick={handleNodeClick}
                 />
               ) : (
-                <div className="bg-primary flex h-[600px] w-full flex-col items-center justify-center gap-4 text-xl font-bold text-white">
-                  <h2 className="font-mono text-lg font-bold text-zinc-200">
+                <div className="bg-primary mx-auto flex h-[600px] w-full max-w-52 flex-col items-center justify-center gap-4">
+                  <p className="font-mono text-xs font-bold text-zinc-200">
                     Create files/folders from terminal
-                  </h2>
+                  </p>
                 </div>
               )}
             </div>
