@@ -17,11 +17,10 @@ import getParentPath from './utils/getParentNodePath'
 import CodeEditor from './components/CodeEditor'
 
 const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io(
-  'http://localhost:1337',
+  import.meta.env.VITE_SERVER_URL,
   {
     extraHeaders: {
-      authorization:
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzM1NpZ25lZEdldFVSTCI6IiIsInMzU2lnbmVkUHV0VVJMIjoiIiwicHJlQm9vdENvbW1hbmQiOiJnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL0lhbUF5YWFuU2svaWRlbnRpeC1ncmFwaHFsIC4gJiYgcm0gLXJmIC5naXQiLCJpc0ZpcnN0VGltZUJvb3RpbmdGcm9tVGhpc1MzQnVja2V0Ijp0cnVlLCJpYXQiOjE3MjYwODM1NDUsImV4cCI6MTczNjQ1MTU0NX0.vkIoS4lB9G1TOx1uylSKxZrnm-IB4i24IAzhMrKmdeE',
+      authorization: import.meta.env.VITE_CONTAINER_ACCESS_TOKEN,
     },
   }
 )
