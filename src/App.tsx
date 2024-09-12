@@ -95,17 +95,17 @@ function App() {
 
   return (
     <>
-      <section className="bg-primary flex h-[110vh] items-center border-b-2 border-slate-500 p-20">
+      <section className="flex h-[110vh] items-center border-b-2 border-slate-500 bg-primary p-20">
         <div className=" flex max-w-2xl flex-col gap-8">
-          <h1 className="w-full font-mono text-9xl font-semibold text-white">
+          <h1 className="w-full font-mono text-5xl font-semibold text-white sm:text-7xl lg:text-9xl">
             Termify<span className="animate-pulse">.</span>
           </h1>
-          <p className="pl-4 text-3xl font-light text-gray-400">
+          <p className="pl-4 text-base font-light text-gray-400 sm:text-xl lg:text-3xl">
             Explore your favorite programming language without the hassle of
             setting environment.
           </p>
           <a href="#playground" className="mx-4">
-            <button className="text-primary mt-4 w-44 rounded bg-white px-4  py-2 text-base hover:bg-white/90">
+            <button className="mt-4 w-44 rounded bg-white px-4 py-2  text-base text-primary hover:bg-white/90">
               Get Started
             </button>
           </a>
@@ -114,10 +114,10 @@ function App() {
       <SocketContext.Provider value={socket}>
         <section className="bg-white px-4 py-10">
           <div className="mx-auto mb-10 max-w-4xl space-y-6 text-center">
-            <h2 className="text-primary text-4xl font-semibold">
+            <h2 className="text-4xl font-semibold text-primary">
               Run your code directly from the Web...
             </h2>
-            <p className="text-primary/80 font-mono text-lg font-medium">
+            <p className="font-mono text-lg font-medium text-primary/80">
               <span className="font-semibold">
                 Currently supported languages:
               </span>{' '}
@@ -125,10 +125,10 @@ function App() {
             </p>
           </div>
           <div
-            className="grid-rows-editor bg-primary mx-auto grid max-w-7xl grid-cols-5 overflow-hidden rounded-xl border-4 border-slate-400 shadow-2xl"
+            className="mx-auto grid max-w-7xl grid-cols-5 grid-rows-editor overflow-hidden rounded-xl border-4 border-slate-400 bg-primary shadow-2xl"
             id="playground"
           >
-            <div className="bg-primary col-span-1 border-r border-slate-800 px-2 py-4 ">
+            <div className="col-span-1 border-r border-slate-800 bg-primary px-2 py-4 ">
               {rootDirTreeData ? (
                 <Tree
                   data={rootDirTreeData}
@@ -136,7 +136,7 @@ function App() {
                   handleNodeClick={handleNodeClick}
                 />
               ) : (
-                <div className="bg-primary mx-auto flex h-[600px] w-full max-w-52 flex-col items-center justify-center gap-4">
+                <div className="mx-auto flex h-[600px] w-full max-w-52 flex-col items-center justify-center gap-4 bg-primary">
                   <p className="font-mono text-xs font-bold text-zinc-200">
                     Create files/folders from terminal
                   </p>
@@ -147,7 +147,7 @@ function App() {
               {lastFileNode ? (
                 <CodeEditor node={lastFileNode} />
               ) : (
-                <div className="bg-primary flex h-[600px] w-full flex-col items-center justify-center gap-4 text-xl font-bold text-white">
+                <div className="flex h-[600px] w-full flex-col items-center justify-center gap-4 bg-primary text-xl font-bold text-white">
                   <h2 className="font-mono text-2xl font-bold text-zinc-200">
                     Welcome to Termify
                   </h2>
@@ -157,7 +157,7 @@ function App() {
                 </div>
               )}
             </div>
-            <div className="bg-primary col-span-5 border-t-2 border-slate-800">
+            <div className="col-span-5 border-t-2 border-slate-800 bg-primary">
               <Terminal />
             </div>
           </div>
