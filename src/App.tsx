@@ -165,7 +165,12 @@ function App() {
         </section>
       </SocketContext.Provider>
 
-      <footer className="pb-8 text-center text-base text-black/80">
+      <footer className="space-y-4 pb-8 text-center text-base text-black/80">
+        <p>
+          🔴 <span className="font-bold underline">Note:</span> Although this
+          project has a scalable architecture but currently only one user can
+          use this at a time as I wanted to save server costs 😁.
+        </p>
         <p>
           Made with ❤️ by{' '}
           <a className="hover:underline" href="https://github.com/IamAyaanSk">
