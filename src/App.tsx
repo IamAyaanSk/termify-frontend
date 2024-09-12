@@ -126,7 +126,7 @@ function App() {
             </p>
           </div>
           <div
-            className="grid-rows-editor mx-auto grid max-w-7xl grid-cols-5 overflow-hidden rounded-xl border-4 border-slate-400 shadow-2xl"
+            className="grid-rows-editor bg-primary mx-auto grid max-w-7xl grid-cols-5 overflow-hidden rounded-xl border-4 border-slate-400 shadow-2xl"
             id="playground"
           >
             <div className="bg-primary col-span-1 border-r border-slate-800 px-2 py-4 ">
