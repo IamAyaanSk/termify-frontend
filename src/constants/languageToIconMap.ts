@@ -1,0 +1,58 @@
+import { IconType } from 'react-icons'
+import {
+  FaJs,
+  FaPython,
+  FaJava,
+  FaHtml5,
+  FaCss3Alt,
+  FaFileCode,
+  FaFileAlt,
+} from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiJson,
+  SiMarkdown,
+  SiPhp,
+  SiRuby,
+  SiRust,
+  SiGo,
+  SiSwift,
+  SiKotlin,
+  SiLua,
+  SiDart,
+  SiYaml,
+} from 'react-icons/si'
+
+const languageToIconMap: { [key: string]: IconType } = {
+  javascript: FaJs,
+  typescript: SiTypescript,
+  html: FaHtml5,
+  css: FaCss3Alt,
+  scss: FaCss3Alt,
+  json: SiJson,
+  markdown: SiMarkdown,
+  python: FaPython,
+  java: FaJava,
+  c: FaFileCode,
+  cpp: FaFileCode,
+  csharp: FaFileCode,
+  php: SiPhp,
+  ruby: SiRuby,
+  rust: SiRust,
+  go: SiGo,
+  swift: SiSwift,
+  sql: FaFileCode,
+  yaml: SiYaml,
+  shell: FaFileAlt,
+  bat: FaFileAlt,
+  perl: FaFileAlt,
+  r: FaFileAlt,
+  lua: SiLua,
+  dart: SiDart,
+  kotlin: SiKotlin,
+  'objective-c': FaFileCode,
+  'objective-cpp': FaFileCode,
+  groovy: FaFileCode,
+}
+
+export default languageToIconMap
