@@ -35,6 +35,7 @@ const Terminal = () => {
       } else if (data.includes('su damner')) return
       else if (data.includes('su: Authentication failure')) {
         terminal.reset()
+        socket.emit('terminal:writeToTerminalFromClient', 'clear\n')
         return
       }
       terminal.write(data)
