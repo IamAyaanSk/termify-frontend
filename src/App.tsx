@@ -45,6 +45,12 @@ function App() {
       console.log('Disconnected from server')
     })
 
+    socket.on('connect_error', (err) => {
+      console.log(err.message)
+
+      console.log(err)
+    })
+
     return () => {
       if (socket.connected) socket.disconnect()
     }
