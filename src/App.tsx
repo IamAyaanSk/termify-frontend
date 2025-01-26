@@ -121,7 +121,7 @@ function App() {
               <span className="font-semibold">
                 Currently supported languages:
               </span>{' '}
-              Javascript, Python, Typescript, HTML, CSS
+              Javascript, Python, Typescript
             </p>
           </div>
           <div
