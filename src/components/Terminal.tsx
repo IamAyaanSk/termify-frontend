@@ -14,7 +14,7 @@ const Terminal = () => {
     isRendered.current = true
 
     const terminal = new XTerminal({
-      rows: 12,
+      rows: 10,
       cols: 80,
       cursorBlink: true,
       fontSize: 14,

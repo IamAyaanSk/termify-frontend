@@ -4,7 +4,7 @@ import TreeNode from './TreeNode'
 
 const Tree = ({ data, selectedNode, handleNodeClick }: ITreeProps) => {
   return (
-    <div className=" bg-primary h-full">
+    <div className=" h-full bg-primary">
       {data.map((node: IFileAndFolderDetails) => (
         <TreeNode
           key={node.path}

@@ -95,7 +95,7 @@ function App() {
 
   return (
     <>
-      <section className="flex h-[110vh] items-center border-b-2 border-slate-500 bg-primary p-20">
+      <section className="flex h-screen items-center border-b-2 border-slate-500 bg-primary p-20">
         <div className=" flex max-w-2xl flex-col gap-8">
           <h1 className="w-full font-mono text-5xl font-semibold text-white sm:text-7xl lg:text-9xl">
             Termify<span className="animate-pulse">.</span>
@@ -111,8 +111,25 @@ function App() {
           </a>
         </div>
       </section>
+
+      <section className="space-y-4 py-8 text-center text-base text-black/80">
+        <p>
+          🔴 <span className="font-bold underline">Note:</span> Although this
+          project has a scalable architecture but currently the same editor is
+          shared to all users as I wanted to save server costs 😁. ( Also this
+          is currently running on render so the terminal may take some time to
+          connect)
+        </p>
+        <p>
+          Made with ❤️ by{' '}
+          <a className="hover:underline" href="https://github.com/IamAyaanSk">
+            Ayaan Shaikh
+          </a>
+        </p>
+      </section>
+
       <SocketContext.Provider value={socket}>
-        <section className="bg-white px-4 py-10">
+        <section className="bg-white pt-10">
           <div className="mx-auto mb-10 max-w-4xl space-y-6 text-center">
             <h2 className="text-4xl font-semibold text-primary">
               Run your code directly from the Web...
@@ -125,7 +142,7 @@ function App() {
             </p>
           </div>
           <div
-            className="mx-auto grid max-w-7xl grid-cols-5 grid-rows-editor overflow-hidden rounded-xl border-4 border-slate-400 bg-primary shadow-2xl"
+            className="grid w-full grid-cols-5 grid-rows-editor overflow-hidden rounded-xl border-4 border-slate-400 bg-primary shadow-2xl"
             id="playground"
           >
             <div className="col-span-1 border-r border-slate-800 bg-primary px-2 py-4 ">
@@ -136,18 +153,18 @@ function App() {
                   handleNodeClick={handleNodeClick}
                 />
               ) : (
-                <div className="mx-auto flex h-[600px] w-full max-w-52 flex-col items-center justify-center gap-4 bg-primary">
+                <div className="mx-auto flex h-[calc(100vh-220px)] w-full max-w-52 flex-col items-center justify-center gap-4 bg-primary">
                   <p className="font-mono text-xs font-bold text-zinc-200">
                     Create files/folders from terminal
                   </p>
                 </div>
               )}
             </div>
-            <div className="col-span-4 col-start-2 h-[600px]">
+            <div className="col-span-4 col-start-2 h-[calc(100vh-220px)]">
               {lastFileNode ? (
                 <CodeEditor node={lastFileNode} />
               ) : (
-                <div className="flex h-[600px] w-full flex-col items-center justify-center gap-4 bg-primary text-xl font-bold text-white">
+                <div className="flex h-[calc(100vh-220px)] w-full flex-col items-center justify-center gap-4 bg-primary text-xl font-bold text-white">
                   <h2 className="font-mono text-2xl font-bold text-zinc-200">
                     Welcome to Termify
                   </h2>
@@ -163,20 +180,6 @@ function App() {
           </div>
         </section>
       </SocketContext.Provider>
-
-      <footer className="space-y-4 pb-8 text-center text-base text-black/80">
-        <p>
-          🔴 <span className="font-bold underline">Note:</span> Although this
-          project has a scalable architecture but currently only one user can
-          use this at a time as I wanted to save server costs 😁.
-        </p>
-        <p>
-          Made with ❤️ by{' '}
-          <a className="hover:underline" href="https://github.com/IamAyaanSk">
-            Ayaan Shaikh
-          </a>
-        </p>
-      </footer>
     </>
   )
 }

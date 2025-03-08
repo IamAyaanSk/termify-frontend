@@ -62,11 +62,11 @@ const CodeEditor = ({ node }: ICodeEditorProps) => {
     <>
       <div>
         <Editor
-          height="600px"
+          className="mt-[5px] h-[calc(100vh-225px)]"
           theme="vs-dark"
           path={node.path}
           loading={
-            <div className="bg-primary flex h-[600px] w-full flex-col items-center justify-center gap-4 text-xl font-bold text-white">
+            <div className="flex h-[600px] w-full flex-col items-center justify-center gap-4 bg-primary text-xl font-bold text-white">
               <h2 className="font-mono text-2xl font-bold text-zinc-200">
                 Setting things up...
               </h2>
